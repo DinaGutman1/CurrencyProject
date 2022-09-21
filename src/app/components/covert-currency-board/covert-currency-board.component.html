@@ -1,0 +1,30 @@
+<h1>Currency Converter</h1>
+
+<form [formGroup]="currencyForm">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Enter amount</mat-label>
+    <input matInput formControlName="amount" (input)="onAmountChange()">
+  </mat-form-field>
+
+
+  <mat-form-field appearance="fill">
+    <mat-label for="from">From</mat-label>
+    <mat-select formControlName="from">
+      <mat-option *ngFor="let rate of rateList" [value]="rate">
+        {{rate.currencyName}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>To</mat-label>
+    <mat-select formControlName="to">
+      <mat-option *ngFor="let rate of rateList" [value]="rate">
+        {{rate.currencyName}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <div>
+    <span class="span" *ngIf="validForm()">{{finallyCalculate}}</span>
+  </div>
+</form>
