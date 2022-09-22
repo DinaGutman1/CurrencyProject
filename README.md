@@ -1,3 +1,10 @@
+הוראות להרצת הפרויקט:
+להוריד את הפרויקט מתוך ה GitHub בקישור:https://github.com/DinaGutman1/CurrencyProject
+להריץ על כל הפרויקט npm install
+ואז בתוך תיקיית ה src לכתוב את הפקודה של ההרצה:ng s -o
+בהצלחה!
+
+
 # Nisuy
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.1.
